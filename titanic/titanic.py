@@ -9,7 +9,6 @@ from sklearn.metrics import accuracy_score
 titanic = pd.read_csv("titanic/Titanic-Dataset.csv")
 
 
-
 #Dropping columns and cleaning data
 titanic = titanic.drop(['Name', 'Ticket', 'Cabin'], axis=1)
 
