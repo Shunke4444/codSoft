@@ -7,8 +7,6 @@ import seaborn as sns
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import cross_val_score
 
-
-
 movies = pd.read_csv("movieRating/data.csv", encoding="latin-1")
 
 # Clean 'Year' column
@@ -26,7 +24,6 @@ movies = movies.dropna(subset=["Rating"])
 movies[['Genre', 'Director', 'Actor 1', 'Actor 2', 'Actor 3']] = movies[[
     'Genre', 'Director', 'Actor 1', 'Actor 2', 'Actor 3'
 ]].fillna('Unknown')
-
 
 #Features
 movies['Rating_Per_Vote'] = movies['Rating'] / movies['Votes']
